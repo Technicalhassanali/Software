@@ -1,0 +1,13 @@
+install/Download office deployment tool and extract it.
+https://www.microsoft.com/en-us/download/details.aspx?id=49117
+
+open cmd and type the following command
+.\setup.exe /configure .\configuration-Office2021Enterprise.xml
+
+After installing then open cmd and paste the blow code :
+
+if exist "C:\Program Files\Microsoft Office\Office16\ospp.vbs" cd /d "C:\Program Files\Microsoft Office\Office16"
+if exist "C:\Program Files (x86)\Microsoft Office\Office16\ospp.vbs" cd /d "C:\Program Files (x86)\Microsoft Office\Office16"
+
+cscript ospp.vbs /sethst:kms.teevee.asia
+cscript ospp.vbs /act
